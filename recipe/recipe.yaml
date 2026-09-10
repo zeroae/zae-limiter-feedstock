@@ -1,7 +1,6 @@
 context:
   name: zae-limiter
   version: "0.12.0"
-  python_min: "3.11"
 
 package:
   name: ${{ name }}
@@ -14,7 +13,7 @@ source:
 build:
   noarch: python
   script: python -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -41,7 +40,9 @@ tests:
       imports:
         - zae_limiter
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
   - script:
       - zae-limiter --help
       - zae-limiter lambda-export --output lambda.zip
