@@ -1,6 +1,6 @@
 context:
   name: zae-limiter
-  version: "0.13.0"
+  version: "0.14.0"
 
 package:
   name: ${{ name }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/z/${{ name }}/zae_limiter-${{ version }}.tar.gz
-  sha256: 05bec0abef882a85a76beaa68e578f5823355c9a1cb2867ecad40d96558be023
+  sha256: 2ed6d50739491468eee381d164d9f6acb947addda954e1c13812687795647c0b
 
 build:
   noarch: python
@@ -29,11 +29,13 @@ requirements:
     - aws_lambda_builders >=1.40.0
     - boto3 >=1.34.0
     - click >=8.0.0
+    - cronsim >=2.7
     - docker-py >=7.0.0
     - pip
     - python-ulid >=3.0.0
     - pyyaml >=6.0
     - questionary >=2.0
+    - tzdata
 
 tests:
   - python:
