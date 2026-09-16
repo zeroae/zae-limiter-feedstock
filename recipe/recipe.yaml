@@ -32,10 +32,10 @@ requirements:
     - cronsim >=2.7
     - docker-py >=7.0.0
     - pip
+    - python-tzdata
     - python-ulid >=3.0.0
     - pyyaml >=6.0
     - questionary >=2.0
-    - tzdata
 
 tests:
   - python:
